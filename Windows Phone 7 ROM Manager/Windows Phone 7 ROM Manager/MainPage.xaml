@@ -16,9 +16,9 @@
             <TextBlock Text="&#xE782;" FontFamily="Hololens MDL2 Assets" FontSize="25" Margin="15,8,0,0"/>
             <TextBlock Text="Windows Phone 7 Center" Margin="50,10,0,0" Width="220" HorizontalAlignment="Left" FontWeight="Medium"/>
             <Image Source="ms-appx:///Assets/wp7iconshadow.png" Height="40" Width="40" Margin="0,0,0,0"/>
-        <NavigationView x:Name="mainshellnav" Grid.Row="1" Background="{ThemeResource SystemControlAcrylicElementBrush}">
+        <NavigationView x:Name="mainshellnav" Grid.Row="1" Background="{ThemeResource SystemControlAcrylicElementBrush}" IsBackEnabled="False" IsBackButtonVisible="Collapsed" SelectionChanged="mainshellnav_SelectionChanged">
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Home" Content="Home"/>
+                <NavigationViewItem Icon="Home" Content="Home" Tag="HomePage"/>
             </NavigationView.MenuItems>
             <Frame x:Name="contentFrame"/>
         </NavigationView>
