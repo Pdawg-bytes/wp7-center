@@ -34,18 +34,42 @@ namespace Windows_Phone_7_ROM_Manager
             if (args.IsSettingsSelected)
             {
                 contentFrame.Navigate(typeof(Settings));
+                mainshellnav.Header = "Settings";
             }
             else
             {
-                var selectedItem = (Microsoft.UI.Xaml.Controls.NavigationViewItem)args.SelectedItem;
-                if (selectedItem != null)
+                NavigationViewItem item = args.SelectedItem as NavigationViewItem;
+
+                switch (item.Tag.ToString())
                 {
-                    string selectedItemTag = ((string)selectedItem.Tag);
-                    string pageName = "Windows_Phone_7_ROM_Manager. " + selectedItemTag;
-                    Type pageType = Type.GetType(pageName);
-                    contentFrame.Navigate(pageType);
+                    case "HomePage":
+                    default:
+                        contentFrame.Navigate(typeof(HomePage));
+                        mainshellnav.Header = "Home";
+                        break;
+                    case "RomMan":
+                        contentFrame.Navigate(typeof(RomMan));
+                        mainshellnav.Header = "ROM Manager";
+                        break;
+                    case "Rooting":
+                        contentFrame.Navigate(typeof(Rooting));
+                        mainshellnav.Header = "Rooting";
+                        break;
+                    case "UnlockedROMs":
+                        contentFrame.Navigate(typeof(UnlockedROMs));
+                        mainshellnav.Header = "Unlocked ROMs";
+                        break;
+                    case "Resources":
+                        contentFrame.Navigate(typeof(Resources));
+                        mainshellnav.Header = "Resources";
+                        break;
                 }
             }
+        }
+
+        private void mainshellnav_Loaded(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(HomePage));
         }
     }
 }

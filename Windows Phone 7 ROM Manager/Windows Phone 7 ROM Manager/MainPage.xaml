@@ -16,9 +16,31 @@
             <TextBlock Text="&#xE782;" FontFamily="Hololens MDL2 Assets" FontSize="25" Margin="15,8,0,0"/>
             <TextBlock Text="Windows Phone 7 Center" Margin="50,10,0,0" Width="220" HorizontalAlignment="Left" FontWeight="Medium"/>
             <Image Source="ms-appx:///Assets/wp7iconshadow.png" Height="40" Width="40" Margin="0,0,0,0"/>
-        <NavigationView x:Name="mainshellnav" Grid.Row="1" Background="{ThemeResource SystemControlAcrylicElementBrush}" IsBackEnabled="False" IsBackButtonVisible="Collapsed" SelectionChanged="mainshellnav_SelectionChanged">
+        <NavigationView x:Name="mainshellnav" Grid.Row="1" Background="{ThemeResource SystemControlAcrylicElementBrush}" IsBackEnabled="False" IsBackButtonVisible="Collapsed" SelectionChanged="mainshellnav_SelectionChanged" Loaded="mainshellnav_Loaded" >
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home" Content="Home" Tag="HomePage"/>
+                <NavigationViewItemHeader Content="Technical"/>
+                <NavigationViewItem Content="ROM Manager" Tag="RomMan">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE160;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Rooting" Tag="Rooting">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE785;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Unlocked ROMs" Tag="UnlockedROMs">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE875;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemHeader Content="Information"/>
+                <NavigationViewItem Content="Resources" Tag="Resources">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
             <Frame x:Name="contentFrame"/>
         </NavigationView>
