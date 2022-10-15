@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Windows_Phone_7_ROM_Manager"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Windows10FallCreatorsUpdate="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)"
     mc:Ignorable="d"
     Background="{ThemeResource SystemControlAcrylicWindowBrush}">
 
@@ -16,33 +16,43 @@
             <TextBlock Text="&#xE782;" FontFamily="Hololens MDL2 Assets" FontSize="25" Margin="15,8,0,0"/>
             <TextBlock Text="Windows Phone 7 Center" Margin="50,10,0,0" Width="220" HorizontalAlignment="Left" FontWeight="Medium"/>
             <Image Source="ms-appx:///Assets/wp7iconshadow.png" Height="40" Width="40" Margin="0,0,0,0"/>
-        <NavigationView x:Name="mainshellnav" Grid.Row="1" Background="{ThemeResource SystemControlAcrylicElementBrush}" IsBackEnabled="False" IsBackButtonVisible="Collapsed" SelectionChanged="mainshellnav_SelectionChanged" Loaded="mainshellnav_Loaded" >
-            <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Home" Content="Home" Tag="HomePage"/>
-                <NavigationViewItemHeader Content="Technical"/>
-                <NavigationViewItem Content="ROM Manager" Tag="RomMan">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE160;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Rooting" Tag="Rooting">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE785;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Unlocked ROMs" Tag="UnlockedROMs">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE875;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItemHeader Content="Information"/>
-                <NavigationViewItem Content="Resources" Tag="Resources">
-                    <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-            </NavigationView.MenuItems>
-            <Frame x:Name="contentFrame"/>
-        </NavigationView>
+        <Windows10FallCreatorsUpdate:NavigationView x:Name="mainshellnav" Grid.Row="1" Background="{ThemeResource SystemControlAcrylicElementBrush}" SelectionChanged="mainshellnav_SelectionChanged" Loaded="mainshellnav_Loaded">
+            <Windows10FallCreatorsUpdate:NavigationView.MenuItems>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Icon="Home" Content="Home" Tag="HomePage"/>
+                <Windows10FallCreatorsUpdate:NavigationViewItemHeader Content="Technical"/>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="ROM Manager" Tag="RomMan">
+                    <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                        <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE160;"/>
+                    </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                </Windows10FallCreatorsUpdate:NavigationViewItem>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="Rooting" Tag="Rooting">
+                    <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                        <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE785;"/>
+                    </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                </Windows10FallCreatorsUpdate:NavigationViewItem>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="Unlocked ROMs" Tag="UnlockedROMs">
+                    <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                        <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC20;"/>
+                    </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                </Windows10FallCreatorsUpdate:NavigationViewItem>
+                <Windows10FallCreatorsUpdate:NavigationViewItemHeader Content="Information"/>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="Resources" Tag="Resources">
+                    <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                        <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE774;"/>
+                    </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                </Windows10FallCreatorsUpdate:NavigationViewItem>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="OS Architecture" Tag="OSArch">
+                    <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                        <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE152;"/>
+                    </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                </Windows10FallCreatorsUpdate:NavigationViewItem>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="Version History" Tag="VersionHistory">
+                    <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                        <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE81C;"/>
+                    </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                </Windows10FallCreatorsUpdate:NavigationViewItem>
+            </Windows10FallCreatorsUpdate:NavigationView.MenuItems>
+            <Frame x:Name="contentFrame" Background="{ThemeResource SystemControlAcrylicWindowBrush}" />
+        </Windows10FallCreatorsUpdate:NavigationView>
     </Grid>
 </Page>

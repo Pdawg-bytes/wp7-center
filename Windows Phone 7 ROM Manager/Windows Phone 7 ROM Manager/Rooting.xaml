@@ -6,9 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource SystemControlAcrylicElementBrush}">
 
     <Grid>
-        <Button VerticalAlignment="Center" HorizontalAlignment="Center" Content="Get XAPs"/>
+        <ScrollViewer HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <muxc:InfoBar Severity="Warning" IsOpen="True" IsClosable="False" FontSize="18" FontWeight="SemiLight" IsIconVisible="False" MinHeight="25" MaxHeight="50" x:Name="WarningInfoBar" VerticalAlignment="Top">
+                    <muxc:InfoBar.Content>
+                        <TextBlock Text="Warning: Proceed at your own risk. Your device can be damaged to no repair. Continue with caution." TextWrapping="WrapWholeWords" VerticalAlignment="Center"/>
+                    </muxc:InfoBar.Content>
+                </muxc:InfoBar>
+                <TextBlock Text="Steps" FontSize="30" FontWeight="Bold" Margin="15,30,0,0"/>
+                <TextBlock Text="1. Preparing a computer" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="First, you're gonna need a computer or virtual machine running Windows 7 64bit. This system needs to have the Windows Phone RTM SDK (found in the Resources page), as well as Zune 4.8 Software (also in Resources) installed. In total, expect this to take up about 10GB at max. If you got everything installed correctly, look at the next step." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="2. Deploying the root" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="Now that your computer is ready to go, it's time to deploy the root app (Root app for download in Resources). Once you have downloaded the two XAP files, open the newly installed application named 'Application Deployment' on your Windows 7 system. Then, open the Zune software, and plug in your phone. In the Application Deployment window, make sure the target is set to 'Device' and NOT 'Emulator'. Then, click the 'Browse' button, and find the file called 'WP7 Root Tools 1.2.xap'. Finally, click the Deploy button. If the XAP deployed properly, move to the next step." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="3. Finalizing the root" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="This is the final step to use the Windows Phone 7 Root! After the app is deployed to your phone, find an app called 'WP7 Root Tools' in your apps list. When you open it, you will be greeted with a prompt to begin phase 1 of the installation. Click the Continue button if you wish to proceed. Next, the phone will do some things, don't touch it. When the device returns back to the start screen, go open the app again. Then, it'll prompt you to complete phase 2 of the installation. Click continue. The phone will proceed to reboot and it may take some time. When your phone reboots, you're done! You Windows Phone 7 Device is officially rooted! You may now re enter the app to find a registry editor, file explorer, certificate manager, and more! Enjoy the root!" FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="4. (Not needed) A root companion" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="If you'd like to get a little more out of the root, follow these steps. In the archive with the WP7 Root Apps, you should have another file named 'wphTweaks.xap'. This is an app that has a ton of tweaks that take advantage of your rooted device. To install it, follow steps 1 and 2. The app does not require any phase 1 or 2 install, but it does require root access. Open WP7 Root Tools, and in the 'Policies' menu, scroll until you see the tweaks app. Then, just turn on the toggle switch. Make sure to reboot your phone after, and enjoy the extra tweaks!" FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

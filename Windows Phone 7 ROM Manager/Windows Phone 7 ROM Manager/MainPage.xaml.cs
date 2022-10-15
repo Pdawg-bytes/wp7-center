@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using static System.Net.Mime.MediaTypeNames;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -62,6 +61,14 @@ namespace Windows_Phone_7_ROM_Manager
                     case "Resources":
                         contentFrame.Navigate(typeof(Resources));
                         mainshellnav.Header = "Resources";
+                        break;
+                    case "OSArch":
+                        contentFrame.Navigate(typeof(OSArch));
+                        mainshellnav.Header = "OS Architecture";
+                        break;
+                    case "VersionHistory":
+                        contentFrame.Navigate(typeof(VersionHistory));
+                        mainshellnav.Header = "Version History";
                         break;
                 }
             }

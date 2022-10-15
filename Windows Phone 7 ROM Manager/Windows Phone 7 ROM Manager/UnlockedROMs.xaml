@@ -9,6 +9,22 @@
     Background="{ThemeResource SystemControlAcrylicElementBrush}">
 
     <Grid>
-        <TextBlock Text="TBD" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ScrollViewer HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto" Margin="0,0,0,15">
+            <StackPanel>
+                <TextBlock Text="Installation Steps" FontSize="30" FontWeight="Bold" Margin="15,5,0,0"/>
+                <TextBlock Text="1. Preparing a computer" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="First, you're gonna need a computer or virtual machine running Windows 7 64bit. This system needs to have the Windows Phone RTM SDK (found in the Resources page) installed. In total, expect this to take up about 8GB at max. If you got everything installed correctly, look at the next step." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="2. Downloading and installing the unlocked emulators" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="To download and install the emulators, head over to Resources and download the Packed Unlocked Emulators. These zip files come with a copy of the Windows Phone SDK too, but you don't need to install that copy. These packed emulators have everything you need, including a README.txt file, which you should actually read." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="Questions" FontSize="30" FontWeight="Bold" Margin="15,25,0,0"/>
+                <TextBlock Text="1. What is an 'unlocked' emulator?" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="An unlocked emulator is a Windows Phone 7 Emulator that has been modified to uncover the hidden apps and features in the emulator. Normally, the Windows Phone 7 Emulator is very barebones, and only allows you to open Internet Explorer and a few settings menus. These unlocked ROMs allow every app to be opened. This is really cool, because some of the ROMs are beta builds and have some awesome features and hidden internal tools. You should try them out!" FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="2. What are the different build numbers for?" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="The ROM build numbers represent the stage of development that ROM was in. Anything before build 7003 is considered a beta build of Windows Phone 7. The build 6176 ROM is a beta, and it has internal testing features. Anything after 7003 is a newer OS version, possibly Windows Phone 7.1, 7.5, or 7.8. See Version History for more." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="Extras" FontSize="30" FontWeight="Bold" Margin="15,25,0,0"/>
+                <TextBlock Text="1. I need your help!" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="Its taken months of searching to even find the two unlocked ROMs that I currently have, and there are still atleast 4 more unlocked ROMs out there. I haven't been able to find them, but maybe you have one, or someone online has one. These files go by similar names, something like 'WM70C1.en-US.unlocked.bin'. If you've ever seen these files before, please, reach out to me by creating an issue on GitHub." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
