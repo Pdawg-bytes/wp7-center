@@ -30,7 +30,12 @@
                         <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE785;"/>
                     </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
                 </Windows10FallCreatorsUpdate:NavigationViewItem>
-                <Windows10FallCreatorsUpdate:NavigationViewItem Content="Unlocked ROMs" Tag="UnlockedROMs">
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="Developer Unlocking" Tag="DeveloperUnlocking">
+                    <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                        <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC7A;"/>
+                    </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
+                </Windows10FallCreatorsUpdate:NavigationViewItem>
+                <Windows10FallCreatorsUpdate:NavigationViewItem Content="Unlocked Emulator ROMs" Tag="UnlockedROMs">
                     <Windows10FallCreatorsUpdate:NavigationViewItem.Icon>
                         <Windows10FallCreatorsUpdate:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC20;"/>
                     </Windows10FallCreatorsUpdate:NavigationViewItem.Icon>

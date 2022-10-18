@@ -56,7 +56,7 @@ namespace Windows_Phone_7_ROM_Manager
                         break;
                     case "UnlockedROMs":
                         contentFrame.Navigate(typeof(UnlockedROMs));
-                        mainshellnav.Header = "Unlocked ROMs";
+                        mainshellnav.Header = "Unlocked Emulator ROMs";
                         break;
                     case "Resources":
                         contentFrame.Navigate(typeof(Resources));
@@ -70,6 +70,10 @@ namespace Windows_Phone_7_ROM_Manager
                         contentFrame.Navigate(typeof(VersionHistory));
                         mainshellnav.Header = "Version History";
                         break;
+                    case "DeveloperUnlocking":
+                        contentFrame.Navigate(typeof(DeveloperUnlocking));
+                        mainshellnav.Header = "Developer Unlocking";
+                        break;
                 }
             }
         }
@@ -77,6 +81,7 @@ namespace Windows_Phone_7_ROM_Manager
         private void mainshellnav_Loaded(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(typeof(HomePage));
+            mainshellnav.Header = "Home";
         }
     }
 }

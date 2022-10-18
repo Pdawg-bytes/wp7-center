@@ -9,6 +9,40 @@
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource SystemControlAcrylicElementBrush}">
 
+    <Page.Resources>
+        <CollectionViewSource x:Name="cvsProjects" IsSourceGrouped="True" 
+                              ItemsPath="Activities"/>
+    </Page.Resources>
+
     <Grid>
+        <GridView ItemsSource="{Binding Source={StaticResource cvsProjects}}" MaxHeight="500">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="20">
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold" 
+                                   Style="{StaticResource BaseTextBlockStyle}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+
+            <GridView.GroupStyle>
+                <GroupStyle HidesIfEmpty="True">
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0">
+                                <TextBlock Text='{Binding Name}' 
+                                            Margin="12"
+                                           Style="{StaticResource HeaderTextBlockStyle}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </GridView.GroupStyle>
+        </GridView>
     </Grid>
 </Page>

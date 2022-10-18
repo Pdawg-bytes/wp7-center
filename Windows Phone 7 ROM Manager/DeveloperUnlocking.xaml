@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Windows_Phone_7_ROM_Manager.DeveloperUnlocking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Windows_Phone_7_ROM_Manager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    Background="{ThemeResource SystemControlAcrylicElementBrush}">
+
+    <Grid>
+        <ScrollViewer HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <muxc:InfoBar Severity="Warning" IsOpen="True" IsClosable="False" FontSize="18" FontWeight="SemiLight" IsIconVisible="False" MinHeight="25" MaxHeight="120" x:Name="WarningInfoBar" VerticalAlignment="Top">
+                    <muxc:InfoBar.Content>
+                        <TextBlock Text="Warning: Proceed at your own risk. Your device can be damaged to no repair. Continue with caution. (This warning only applies for post 73xx devices.)" TextWrapping="WrapWholeWords" VerticalAlignment="Center" Margin="0,8,0,10"/>
+                    </muxc:InfoBar.Content>
+                </muxc:InfoBar>
+                <TextBlock Text="Steps (Pre-73xx build number)" FontSize="30" FontWeight="Bold" Margin="15,30,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="1. Preparing a computer" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="To developer unlock your pre 73xx build number device, you need a few things. First, a Windows 7 system with Zune software installed, a USB cable with data transfer capabilities, and your device. To find the build number of your devices' OS, open Settings, go to about, click the More Info button, and the build number should be there. For example, my device is on 7.10.7720.68. Look at the four numbers after the .10, and that is the build number. My device would be on build 7720. Preparation is quite simple, just download the ChevronWP7.zip file from the Resources page. Once the zip file is downloaded and extracted, move on to the next step." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="2. Preparing your web server" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="This will get a little bit complicated, but don't let it steer you away from unlocking your device. Trust me, it's awesome! Anyway, let's start. Included in the ChevronWP7.zip file, there will be a setup executable named 'Abyss Web Server.exe'. Open the setup, and just click next. Don't change anything in the installer. Now, why do you need a web server? Well, you used to just e-mail the Chevron certificate file to your phone, but e-mail servies don't work anymore on WP7, so we need to host our own temporary server. Once the setup is done installing, the web server should be running on your system. Now, in file explorer, navigate to 'C:\Abyss Web Server\htdocs'. This is the path where your web server files are. Delete every file in that htdocs folder. Now, go back into the ChevronWP7 extracted folder, copy the file named 'ChevronWP7.cer', and paste it into the htdocs folder mentioned earlier. Now, the final step with the web server! On your computer, open Command Prompt, and type in 'ipconfig'. A lot may come up, but don't worry, you only need one thing. Scroll through the output until you find your wireless adapter, then, look for the IPV4 Address. This is your computers local address on your network. I know this was a lot, but if you got it all done, congrats! Move on to the next step." FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="3. Unlocking your device" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="Unlocking the device is pretty simple. First, on your computer, in the ChevronWP7 folder, there is a .reg file. Install it. It will make sure Chevron can have access to your phone. Now, on your phone, open the browser, and type in that IP address that you get in step 2. It should bring you to a webpage that has a file at the top named 'ChevronWP7.cer' (sound familar?). Click the file, then, a shield will appear. Click the shield, and you will be brought to a prompt asking you to install the certificate. Click the install button, then click Ok. Next, plug your phone into the computer (make sure the device is UNLOCKED, and on the start screen), and open the Zune software. Now, run the ChevronWP7.exe file in the downloaded folder. Check both boxes, and click the Unlock button. If you did everything right, your phone should be unlocked!" FontSize="15" Margin="15,10,15,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="Steps (Post-73xx build number)" FontSize="30" FontWeight="Bold" Margin="15,30,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="1. Searching" FontSize="25" FontWeight="SemiBold" Margin="15,20,0,0" TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="Well... sadly for you, there's gonna be a lot of searching. There is no universal unlock for devices that are post 73xx. You need to search the internet for a custom ROM for your device that supports XAP deployment, and just hope that someone, somewhere, sometime, has archived the ROM that you're looking for, because all the links hosting them are long dead. If you want to go as far as developing your own custom ROM and bootloader, go ahead. Do not attempt this unless you have lots of technical knowledge and low level programming skills. You may also need to flash a custom bootloader, depending on your device. If you do not want to risk your device being completely bricked without a fix, do NOT attempt this, as said in the warning above." FontSize="15" Margin="15,10,15,10" TextWrapping="WrapWholeWords"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
