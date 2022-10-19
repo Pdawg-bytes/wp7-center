@@ -10,39 +10,45 @@
     Background="{ThemeResource SystemControlAcrylicElementBrush}">
 
     <Page.Resources>
-        <CollectionViewSource x:Name="cvsProjects" IsSourceGrouped="True" 
-                              ItemsPath="Activities"/>
+        <CollectionViewSource x:Name="osVersions" IsSourceGrouped="True" 
+                              ItemsPath="VersionCollection"/>
     </Page.Resources>
 
     <Grid>
-        <GridView ItemsSource="{Binding Source={StaticResource cvsProjects}}" MaxHeight="500">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="20">
-                        <TextBlock Text="{Binding Name}" FontWeight="Bold" 
-                                   Style="{StaticResource BaseTextBlockStyle}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-            <GridView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <ItemsWrapGrid MaximumRowsOrColumns="1"/>
-                </ItemsPanelTemplate>
-            </GridView.ItemsPanel>
-
-            <GridView.GroupStyle>
-                <GroupStyle HidesIfEmpty="True">
-                    <GroupStyle.HeaderTemplate>
+        <ScrollViewer x:Name="VersionScroller" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled">
+            <StackPanel>
+                <TextBlock Text="Update name key: RTM: Windows Phone 7.0, Mango: Windows Phone 7.5, Windows Phone 7.8 didn't have a codename." FontSize="15" FontWeight="SemiBold" Margin="20,10,0,0" TextWrapping="WrapWholeWords"/>
+                <GridView ItemsSource="{Binding Source={StaticResource osVersions}}" SelectionMode="None">
+                    <GridView.ItemTemplate>
                         <DataTemplate>
-                            <Grid Margin="0">
-                                <TextBlock Text='{Binding Name}' 
-                                            Margin="12"
-                                           Style="{StaticResource HeaderTextBlockStyle}"/>
-                            </Grid>
+                            <StackPanel Margin="20" Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}" FontWeight="Normal" 
+                                   Style="{StaticResource BaseTextBlockStyle}" MinWidth="310"/>
+                            </StackPanel>
                         </DataTemplate>
-                    </GroupStyle.HeaderTemplate>
-                </GroupStyle>
-            </GridView.GroupStyle>
-        </GridView>
+                    </GridView.ItemTemplate>
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid MaximumRowsOrColumns="10"/>
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+
+                    <GridView.GroupStyle>
+                        <GroupStyle HidesIfEmpty="True">
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0">
+                                        <TextBlock Text='{Binding Name}' 
+                                            Margin="12"
+                                           Style="{StaticResource HeaderTextBlockStyle}"
+                                           FontSize="54"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                        </GroupStyle>
+                    </GridView.GroupStyle>
+                </GridView>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

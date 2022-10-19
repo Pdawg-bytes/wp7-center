@@ -32,7 +32,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="Windows_Phone_7_ROM_Manager.App">
       <uap:VisualElements
-        DisplayName="Windows Phone 7 ROM Manager"
+        DisplayName="Windows Phone 7 Center"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Windows Phone 7 ROM Manager, an app that handles WP7 ROMs and has useful info and tools regarding them."
