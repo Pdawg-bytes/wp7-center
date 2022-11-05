@@ -66,7 +66,13 @@ namespace Windows_Phone_7_ROM_Manager
             VersionList.Add(newVersion);
 
             newVersion = new Versions();
-            newVersion.Name = "Project 3";
+            newVersion.Name = "WP 7.8 Updates";
+            newVersion.VersionCollection.Add(new VersionPropSet()
+            { Name = "7.10.8858.136 (7.8 RTM), Release Date: 2/1/2013" });
+            newVersion.VersionCollection.Add(new VersionPropSet()
+            { Name = "7.10.8860.142, Release Date: 3/14/2013" });
+            newVersion.VersionCollection.Add(new VersionPropSet()
+            { Name = "7.10.8862.144, Release Date: 3/14/2013" });
             VersionList.Add(newVersion);
 
             osVersions.Source = VersionList;
@@ -87,6 +93,5 @@ namespace Windows_Phone_7_ROM_Manager
     public class VersionPropSet
     {
         public string Name { get; set; }
-        public string ReleaseDate { get; set; }
     }
 }
